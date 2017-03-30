@@ -4,8 +4,8 @@ import math
 import sys
 
 
-max_random = sys.maxsize
-max_iterations = sys.maxsize
+max_random = (256**3)
+max_iterations = (256**3)
 
 def get_random_pair():
     a, b = random.randint(0, max_random), random.randint(0, max_random)
@@ -26,9 +26,9 @@ def approx_pi():
             count += 1
         if (count > 0):
             d = get_pi(count, i)
-            err = d - math.pi
-            print("[" + str(i) + "] Pi / Error: " + str(d) + " / " + str(err))
-            if (err < lowest_error):
+            err = abs(d - math.pi)
+            print("[" + str(i) + "/" + str(max_iterations) + "] Pi / Error: " + str(d) + " / " + str(err))
+            if (0 < err < lowest_error):
                 lowest_error = err
                 best_pi = d
 
