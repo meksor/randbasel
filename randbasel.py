@@ -4,8 +4,8 @@ import math
 import sys
 
 
-max_random = (256**3)
-max_iterations = (256**3)
+max_random = (256**2)
+max_iterations = (256**2)
 
 def get_random_pair():
     a, b = random.randint(0, max_random), random.randint(0, max_random)
@@ -33,12 +33,11 @@ def approx_pi():
                 best_pi = d
 
     accuracy = (lowest_error / math.pi) * 100
-    rnd_acc = accuracy
     print("--------------------------------------------------------------")
     print("Aproximated PI: " + str(best_pi))
     print("------ math.pi: " + str(math.pi))
 
-    print("\nAccuracy: " + str(rnd_acc) + "% " + " Lowest Error: " + str(lowest_error))
+    print("\nAccuracy: " + str(accuracy) + " % | Lowest Error: " + str(lowest_error))
     print("--------------------------------------------------------------")
 
 approx_pi()
