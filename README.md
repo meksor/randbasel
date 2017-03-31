@@ -8,6 +8,6 @@ It uses the standard python libaries:
  - random
  - fractions
  - math
- - sys (sys.maxsize to use all the computing power!)
+ - sys (sys.maxsize to use the maximum integer size of your system!)
 
 `python randbasel.py`
